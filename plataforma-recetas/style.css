@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #ff8c42;
+    margin-bottom: 25px;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input, textarea, select {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+textarea {
+    min-height: 80px;
+    resize: vertical;
+    font-family: Arial, sans-serif;
+}
+
+button {
+    padding: 12px;
+    background: #ff8c42;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #e67a31;
+}
+
+.filter-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-section input,
+.filter-section select {
+    flex: 1;
+}
+
+.recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.recipe-card {
+    background: #fff9f5;
+    padding: 20px;
+    border-radius: 10px;
+    border-top: 5px solid #ff8c42;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.recipe-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 15px;
+}
+
+.recipe-name {
+    font-weight: bold;
+    font-size: 20px;
+    color: #333;
+}
+
+.recipe-type {
+    background: #ff8c42;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+.recipe-time {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.recipe-section {
+    margin-bottom: 15px;
+}
+
+.recipe-section h4 {
+    color: #ff8c42;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.recipe-ingredients {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    white-space: pre-line;
+}
+
+.recipe-instructions {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.recipe-footer {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.delete-btn {
+    background: #dc3545;
+    padding: 8px 15px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.delete-btn:hover {
+    background: #c82333;
+}
+
+.empty-message {
+    text-align: center;
+    color: #999;
+    padding: 40px;
+    grid-column: 1 / -1;
+}

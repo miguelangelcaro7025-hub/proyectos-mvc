@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Gastos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>💵 Gestor de Gastos</h1>
+        
+        <div class="form-section">
+            <input type="text" id="description" placeholder="Descripción">
+            <input type="number" id="amount" placeholder="Monto" step="0.01">
+            <select id="category">
+                <option value="comida">Comida</option>
+                <option value="transporte">Transporte</option>
+                <option value="entretenimiento">Entretenimiento</option>
+                <option value="salud">Salud</option>
+                <option value="otros">Otros</option>
+            </select>
+            <button id="addBtn">Agregar Gasto</button>
+        </div>
+
+        <div class="total">
+            Total: $<span id="totalAmount">0.00</span>
+        </div>
+
+        <div class="expenses-list" id="expensesList"></div>
+    </div>
+
+    <script src="js/model.js"></script>
+    <script src="js/view.js"></script>
+    <script src="js/controller.js"></script>
+</body>
+</html>

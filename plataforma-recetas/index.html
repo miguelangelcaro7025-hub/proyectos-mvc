@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Recetas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🍳 Plataforma de Recetas</h1>
+        
+        <div class="form-section">
+            <input type="text" id="recipeName" placeholder="Nombre de la receta">
+            <select id="recipeType">
+                <option value="desayuno">Desayuno</option>
+                <option value="almuerzo">Almuerzo</option>
+                <option value="cena">Cena</option>
+                <option value="postre">Postre</option>
+                <option value="snack">Snack</option>
+            </select>
+            <textarea id="ingredients" placeholder="Ingredientes (uno por línea)"></textarea>
+            <textarea id="instructions" placeholder="Instrucciones"></textarea>
+            <input type="number" id="prepTime" placeholder="Tiempo de preparación (minutos)" min="1">
+            <button id="addBtn">Agregar Receta</button>
+        </div>
+
+        <div class="filter-section">
+            <input type="text" id="searchInput" placeholder="Buscar recetas...">
+            <select id="filterType">
+                <option value="todas">Todos los tipos</option>
+                <option value="desayuno">Desayuno</option>
+                <option value="almuerzo">Almuerzo</option>
+                <option value="cena">Cena</option>
+                <option value="postre">Postre</option>
+                <option value="snack">Snack</option>
+            </select>
+        </div>
+
+        <div class="recipes-grid" id="recipesGrid"></div>
+    </div>
+
+    <script src="js/model.js"></script>
+    <script src="js/view.js"></script>
+    <script src="js/controller.js"></script>
+</body>
+</html>

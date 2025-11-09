@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Propinas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>💰 Calculadora de Propinas</h1>
+        
+        <div class="input-group">
+            <label>Total de la Cuenta ($)</label>
+            <input type="number" id="billAmount" placeholder="0.00" step="0.01" min="0">
+        </div>
+
+        <div class="input-group">
+            <label>Porcentaje de Propina</label>
+            <div class="tip-buttons">
+                <button class="tip-btn" data-tip="10">10%</button>
+                <button class="tip-btn" data-tip="15">15%</button>
+                <button class="tip-btn" data-tip="20">20%</button>
+                <button class="tip-btn" data-tip="25">25%</button>
+            </div>
+            <input type="number" id="customTip" placeholder="Personalizado %" min="0" max="100">
+        </div>
+
+        <div class="input-group">
+            <label>Número de Personas</label>
+            <input type="number" id="peopleCount" placeholder="1" min="1" value="1">
+        </div>
+
+        <div class="results">
+            <div class="result-item">
+                <span>Propina:</span>
+                <span id="tipAmount">$0.00</span>
+            </div>
+            <div class="result-item">
+                <span>Total:</span>
+                <span id="totalAmount">$0.00</span>
+            </div>
+            <div class="result-item highlight">
+                <span>Por Persona:</span>
+                <span id="perPerson">$0.00</span>
+            </div>
+        </div>
+
+        <button id="resetBtn" class="reset-btn">Reiniciar</button>
+    </div>
+
+    <script src="js/model.js"></script>
+    <script src="js/view.js"></script>
+    <script src="js/controller.js"></script>
+</body>
+</html>

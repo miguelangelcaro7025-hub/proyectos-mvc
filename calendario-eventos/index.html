@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario de Eventos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📆 Calendario de Eventos</h1>
+        
+        <div class="form-section">
+            <input type="text" id="eventTitle" placeholder="Título del evento">
+            <input type="date" id="eventDate">
+            <input type="time" id="eventTime">
+            <textarea id="eventDescription" placeholder="Descripción"></textarea>
+            <button id="addBtn">Agregar Evento</button>
+        </div>
+
+        <div class="events-list">
+            <h2>Próximos Eventos</h2>
+            <div id="eventsList"></div>
+        </div>
+    </div>
+
+    <script src="js/model.js"></script>
+    <script src="js/view.js"></script>
+    <script src="js/controller.js"></script>
+</body>
+</html>

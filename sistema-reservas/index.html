@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Reservas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📅 Sistema de Reservas</h1>
+        
+        <div class="form-section">
+            <input type="text" id="name" placeholder="Nombre">
+            <input type="email" id="email" placeholder="Email">
+            <input type="date" id="date">
+            <select id="time">
+                <option value="09:00">09:00 AM</option>
+                <option value="10:00">10:00 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="13:00">01:00 PM</option>
+                <option value="14:00">02:00 PM</option>
+                <option value="15:00">03:00 PM</option>
+                <option value="16:00">04:00 PM</option>
+                <option value="17:00">05:00 PM</option>
+            </select>
+            <select id="service">
+                <option value="consulta">Consulta General</option>
+                <option value="revision">Revisión</option>
+                <option value="tratamiento">Tratamiento</option>
+                <option value="emergencia">Emergencia</option>
+            </select>
+            <button id="reserveBtn">Reservar Cita</button>
+        </div>
+
+        <div class="reservations-list">
+            <h2>Reservas Confirmadas</h2>
+            <div id="reservationsList"></div>
+        </div>
+    </div>
+
+    <script src="js/model.js"></script>
+    <script src="js/view.js"></script>
+    <script src="js/controller.js"></script>
+</body>
+</html>

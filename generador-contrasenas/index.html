@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Contraseñas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 Generador de Contraseñas</h1>
+        
+        <div class="password-display">
+            <input type="text" id="passwordDisplay" readonly>
+            <button id="copyBtn" class="copy-btn">📋</button>
+        </div>
+
+        <div class="options">
+            <div class="option-group">
+                <label>Longitud: <span id="lengthValue">16</span></label>
+                <input type="range" id="lengthSlider" min="4" max="32" value="16">
+            </div>
+
+            <div class="option-group checkbox-group">
+                <label>
+                    <input type="checkbox" id="includeUppercase" checked>
+                    <span>Mayúsculas (A-Z)</span>
+                </label>
+            </div>
+
+            <div class="option-group checkbox-group">
+                <label>
+                    <input type="checkbox" id="includeLowercase" checked>
+                    <span>Minúsculas (a-z)</span>
+                </label>
+            </div>
+
+            <div class="option-group checkbox-group">
+                <label>
+                    <input type="checkbox" id="includeNumbers" checked>
+                    <span>Números (0-9)</span>
+                </label>
+            </div>
+
+            <div class="option-group checkbox-group">
+                <label>
+                    <input type="checkbox" id="includeSymbols" checked>
+                    <span>Símbolos (!@#$%)</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="strength">
+            <div class="strength-label">Seguridad:</div>
+            <div class="strength-bar">
+                <div id="strengthIndicator" class="strength-fill"></div>
+            </div>
+            <div id="strengthText" class="strength-text">Fuerte</div>
+        </div>
+
+        <button id="generateBtn" class="generate-btn">Generar Contraseña</button>
+
+        <div id="notification" class="notification">¡Copiado!</div>
+    </div>
+
+    <script src="js/model.js"></script>
+    <script src="js/view.js"></script>
+    <script src="js/controller.js"></script>
+</body>
+</html>

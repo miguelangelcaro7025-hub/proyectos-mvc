@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Notas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📓 Gestor de Notas</h1>
+        
+        <div class="form-section">
+            <input type="text" id="title" placeholder="Título de la nota">
+            <textarea id="content" placeholder="Contenido de la nota"></textarea>
+            <select id="category">
+                <option value="personal">Personal</option>
+                <option value="trabajo">Trabajo</option>
+                <option value="ideas">Ideas</option>
+                <option value="recordatorios">Recordatorios</option>
+            </select>
+            <button id="addBtn">Agregar Nota</button>
+        </div>
+
+        <div class="filter-section">
+            <input type="text" id="searchInput" placeholder="Buscar notas...">
+            <select id="filterCategory">
+                <option value="todas">Todas las categorías</option>
+                <option value="personal">Personal</option>
+                <option value="trabajo">Trabajo</option>
+                <option value="ideas">Ideas</option>
+                <option value="recordatorios">Recordatorios</option>
+            </select>
+        </div>
+
+        <div class="notes-grid" id="notesGrid"></div>
+    </div>
+
+    <script src="js/model.js"></script>
+    <script src="js/view.js"></script>
+    <script src="js/controller.js"></script>
+</body>
+</html>
